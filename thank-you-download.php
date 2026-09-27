@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 $f = $_GET['file'] ?? ''; $V['DL_FILE'] = preg_match('#^/assets/docs/[a-z0-9/-]+\.pdf$#', $f) ? $f : ''; $V['DL_TITLE'] = e(mb_substr((string) ($_GET['title'] ?? 'your document'), 0, 120));
 ?>
 <!DOCTYPE html>

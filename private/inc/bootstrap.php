@@ -6,7 +6,7 @@
 declare(strict_types=1);
 
 define('PRIV', dirname(__DIR__));                 // /private
-define('PUB', dirname(PRIV) . '/public_html');    // document root
+define('PUB', dirname(PRIV));    // document root
 
 $cfg = PRIV . '/config.php';
 require file_exists($cfg) ? $cfg : PRIV . '/config.example.php';

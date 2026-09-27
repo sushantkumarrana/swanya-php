@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 $V['PRODUCT_CARDS'] = product_cards();
 ?>
 <!DOCTYPE html>

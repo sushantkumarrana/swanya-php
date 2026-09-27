@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 $V['TESTIMONIALS'] = testimonial_carousel();
 ?>
 <!DOCTYPE html>

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 $p = get_post($_GET['slug'] ?? ''); if (!$p) { require __DIR__ . '/404.php'; exit; } $V += post_vars($p);
 ?>
 <!DOCTYPE html>

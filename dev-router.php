@@ -1,7 +1,8 @@
 <?php
-// Local dev only: `php -S localhost:8080 -t public_html dev-router.php` — emulates the .htaccess rewrites.
+// Local dev only: `php -S localhost:8080 dev-router.php` — emulates the .htaccess rewrites.
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$root = __DIR__ . '/public_html';
+$root = __DIR__;
+if (str_starts_with($path, '/private/')) { http_response_code(403); echo 'Forbidden'; return true; }  // .htaccess does this on Apache
 if ($path !== '/' && is_file($root . $path)) return false;                       // static asset
 $map = [
   '#^/products/([a-z0-9-]+)$#' => ['product.php', 'slug'],

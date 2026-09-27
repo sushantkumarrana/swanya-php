@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 header('Content-Type: application/xml; charset=utf-8');
 $site = SITE_URL;
 $urls = [];

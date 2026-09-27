@@ -8,10 +8,13 @@ AddDefaultCharset UTF-8
   RewriteEngine On
   RewriteBase /
 
-  # HTTPS + www canonical (enable after DNS/SSL are live)
-  # RewriteCond %{HTTPS} off [OR]
-  # RewriteCond %{HTTP_HOST} !^www\. [NC]
-  # RewriteRule ^ https://www.swanyapharma.com%{REQUEST_URI} [R=301,L]
+  # HTTPS + non-www canonical
+  # X-Forwarded-Proto check: host runs behind a proxy, without it the rule loops
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://swanyapharma.com%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://swanyapharma.com%{REQUEST_URI} [R=301,L]
 
   # Legacy .html / .php / trailing-slash / index → clean URL (301)
   RewriteCond %{THE_REQUEST} \s/+index(\.php|\.html)?[\s?] [NC]

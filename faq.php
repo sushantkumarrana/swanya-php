@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 $V['FAQ_GROUPS'] = faq_groups(); $V['FAQ_LD'] = faq_ld();
 ?>
 <!DOCTYPE html>

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 $V['BLOG_CARDS'] = blog_cards(); $V['BLOG_CATS'] = blog_cats();
 ?>
 <!DOCTYPE html>

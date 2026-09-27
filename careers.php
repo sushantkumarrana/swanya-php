@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../private/inc/bootstrap.php';
+require_once __DIR__ . '/private/inc/bootstrap.php';
 $V['JOB_CARDS'] = job_cards(); $V['JOBS_LD'] = jobs_ld(); $V['JOB_OPTIONS'] = job_options();
 ?>
 <!DOCTYPE html>
