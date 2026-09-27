@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Swanya Pharmaceuticals — Design tokens
+   Single source of truth for colour, type, spacing, elevation, motion.
+   ========================================================================== */
+:root{
+  /* Ink & text */
+  --ink:#0A2440; --ink-soft:#1B3A5C; --body:#4A6072; --body-light:#7089A0;
+  /* Brand blues — matched to the logo */
+  --primary:#0B78C2; --primary-deep:#0A5A96; --cyan:#37B8EA; --cyan-soft:#8FD6F2;
+  /* Surfaces */
+  --bg:#F4FAFD; --bg-cool:#EAF4FA; --surface:#FFFFFF;
+  --line:#D8E7F1; --line-soft:#E7F1F8;
+  --navy-deep:#08203B; --navy-grad:#0B2C4E;
+  /* Semantic */
+  --success:#1F9D6B; --error:#D0433B; --warn:#D98E1C;
+  /* Glass — always pair blur + 1px border + shadow, never on flat white */
+  --glass-bg:rgba(255,255,255,.55);
+  --glass-bg-dark:rgba(11,44,78,.45);
+  --glass-border:rgba(255,255,255,.35);
+  --glass-blur:18px;
+  /* Type */
+  --f-display:'Sora',system-ui,sans-serif;
+  --f-body:'Inter',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,monospace;
+  /* Layout */
+  --container:1240px; --container-narrow:860px;
+  --gutter:clamp(20px,5vw,64px); --sec-y:clamp(72px,10vw,140px);
+  --radius:18px; --radius-sm:12px; --radius-lg:26px;
+  --header-h:78px;
+  /* Elevation & motion */
+  --shadow-sm:0 2px 10px rgba(10,36,64,.05);
+  --shadow-md:0 18px 44px -20px rgba(10,60,110,.28);
+  --shadow-lg:0 40px 90px -40px rgba(9,50,96,.4);
+  --shadow-glow:0 0 0 1px rgba(55,184,234,.35),0 18px 44px -18px rgba(11,120,194,.45);
+  --ease:cubic-bezier(.22,.61,.36,1); --ease-out:cubic-bezier(.16,1,.3,1); --dur:.35s;
+}

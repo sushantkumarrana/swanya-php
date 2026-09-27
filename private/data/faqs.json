@@ -1,0 +1,26 @@
+[
+  { "category": "Manufacturing", "items": [
+    { "q": "What dosage forms does Swanya manufacture?", "a": "Sterile liquids filled on Form-Fill-Seal (FFS) machines: Sterile Water for Injection (5–30 ml vials), Normal Saline solution (10 ml vials), Respules (1–5 ml solution and suspension vials) and FFS ampoules. Both clear solutions and suspensions are manufactured, in separate areas." },
+    { "q": "What is Form-Fill-Seal and why does it matter?", "a": "FFS is a closed process in which the plastic container is formed, filled and hermetically sealed inside one machine within seconds. It removes glass, separate stoppers and manual handling from the sterile step, which lowers particulate and contamination risk." },
+    { "q": "What batch sizes can you run?", "a": "Manufacturing vessels support batch sizes from 500 litres up to 2,500 litres." },
+    { "q": "Where is the facility located?", "a": "Baddi, Himachal Pradesh, India — one of the country's largest pharmaceutical manufacturing clusters. The site occupies an 1,800 sq. m plot with a 3,000 sq. m vertical built-up area." },
+    { "q": "Do you offer contract manufacturing?", "a": "Yes. Swanya manufactures sterile liquids for marketing companies, hospital supply chains, distributors and export partners under contract or loan-licence arrangements. Send your product list and volumes via the contact form to start a feasibility review." }
+  ]},
+  { "category": "Quality & Compliance", "items": [
+    { "q": "How is Water for Injection produced and controlled?", "a": "Purified Water feeds a multi-column distillation still supplied with pure steam. WFI is stored at 80 °C and above, protected by a vent filter, and circulated continuously through the distribution loop. The loop is sampled routinely for conductivity, pH, pyrogen (bacterial endotoxin) and microbial limits." },
+    { "q": "Which sterilisation methods are used?", "a": "Autoclaving, sterile filtration and Sterilization-in-Place (SIP). Sterilising-grade filters undergo online filter integrity testing." },
+    { "q": "What testing is done in-house?", "a": "Complete testing of raw materials, packaging materials and finished goods in segregated wet, instrument and micro labs, using GLP-compliant instruments and software including HPLC, UV and IR. The laboratories have 100% UPS backup." },
+    { "q": "Do you run stability studies?", "a": "Yes — stability studies are performed for all target markets as per ICH requirements." },
+    { "q": "Which certifications does Swanya hold?", "a": "TODO: confirm with client. The facility and laboratories operate to cGMP and GLP practice; certification documents are shared with qualified partners on request." }
+  ]},
+  { "category": "Ordering & Supply", "items": [
+    { "q": "What is the minimum order quantity?", "a": "MOQ depends on the product, fill volume and batch size (500–2,500 L). Share your requirement through the enquiry form and we will confirm MOQ and lead time." },
+    { "q": "What are typical lead times?", "a": "Lead times depend on artwork approval, material availability and the production schedule. Indicative timelines are provided with every quotation." },
+    { "q": "Can products be supplied under our brand?", "a": "Yes. Private-label / third-party manufacturing with your artwork is standard practice for contract partners." },
+    { "q": "Do you supply outside India?", "a": "Export enquiries are welcome; regulatory and stability support for the destination market is discussed at the feasibility stage. TODO: confirm current export markets with client." }
+  ]},
+  { "category": "Careers", "items": [
+    { "q": "How do I apply for a position at Swanya?", "a": "Use the application form on the Careers page. Attach your CV as PDF or Word (max 5 MB). Shortlisted candidates are contacted by the HR team." },
+    { "q": "Do you hire fresh graduates?", "a": "Yes, for production, QA, QC and engineering trainee roles when openings are available. Check the Careers page for current openings." }
+  ]}
+]

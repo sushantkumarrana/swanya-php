@@ -1,0 +1,136 @@
+{
+  "categories": [
+    { "slug": "svp", "name": "SVP", "long": "Small Volume Parenterals", "desc": "Sterile liquids in single-use vials up to 30 ml, filled on Form-Fill-Seal lines." },
+    { "slug": "flwd", "name": "FLWD Containers", "long": "Form-Fill-Seal containers", "desc": "Plastic FFS vials and ampoules formed, filled and sealed in one closed cycle." },
+    { "slug": "lvp", "name": "LVP", "long": "Large Volume Parenterals", "desc": "TODO: confirm with client — no LVP presentations listed in the site dossier." }
+  ],
+  "products": [
+    {
+      "slug": "sterile-water-for-injection",
+      "name": "Sterile Water for Injection",
+      "short": "SWFI",
+      "category": ["svp", "flwd"],
+      "tagline": "Single-use FFS vials with in-built twist-off cap",
+      "summary": "Sterile, non-pyrogenic Water for Injection in 5, 10, 20, 25 and 30 ml single-use vials, manufactured on Form-Fill-Seal lines from a hot WFI loop maintained at 80 °C and above.",
+      "description": [
+        "Sterile Water for Injection (SWFI) is the diluent and solvent of choice for reconstituting powders for injection and for diluting parenteral drugs before administration. Swanya manufactures SWFI from its in-house Water For Injection system — multi-column distillation fed by Purified Water and pure steam, stored hot and circulated continuously — and fills it on Form-Fill-Seal machines so that the container is formed, filled and hermetically sealed in a single closed cycle.",
+        "Each vial carries an in-built twist-off cap. There is no glass to break, no separate stopper to contaminate and no particulate risk from ampoule opening, which makes the presentation well suited to hospital wards, emergency kits and high-throughput nursing environments.",
+        "Every batch is released only after in-house testing in Swanya's segregated wet, instrument and micro laboratories, including conductivity, pH, bacterial endotoxin (pyrogen) and microbial limit testing on the WFI loop, plus sterility and particulate matter on the finished product."
+      ],
+      "variants": [
+        { "size": "5 ml", "pack": "TODO: confirm pack size" },
+        { "size": "10 ml", "pack": "TODO: confirm pack size" },
+        { "size": "20 ml", "pack": "TODO: confirm pack size" },
+        { "size": "25 ml", "pack": "TODO: confirm pack size" },
+        { "size": "30 ml", "pack": "TODO: confirm pack size" }
+      ],
+      "specs": [
+        ["Dosage form", "Sterile liquid — solvent / diluent for parenteral use"],
+        ["Fill volumes", "5 ml, 10 ml, 20 ml, 25 ml, 30 ml"],
+        ["Container", "Single-use FFS vial with in-built twist-off cap"],
+        ["Filling technology", "Form-Fill-Seal (FFS)"],
+        ["Water source", "In-house WFI, stored and circulated at ≥ 80 °C"],
+        ["Sterilisation", "Filtration with online filter integrity testing; autoclaving / SIP for equipment"],
+        ["Release testing", "In-house: conductivity, pH, BET, microbial limit, sterility"],
+        ["Shelf life", "TODO: confirm with client"],
+        ["Storage", "Store below 30 °C, protect from freezing (TODO: confirm)"]
+      ],
+      "images": [
+        { "src": "/assets/img/real/swanya-ffs-vials-sterile-water-injection", "ext": "png", "w": 1044, "h": 661, "alt": "Sterile Water for Injection single-use FFS vials with twist-off caps" },
+        { "src": "/assets/img/generated/swanya-ffs-vial-filling-line-hero-960", "ext": "jpg", "w": 960, "h": 540, "alt": "FFS vial filling line" }
+      ],
+      "datasheet": "/assets/docs/datasheets/sterile-water-for-injection.pdf",
+      "keywords": "sterile water for injection manufacturer India, SWFI FFS vials Baddi"
+    },
+    {
+      "slug": "normal-saline-solution",
+      "name": "Normal Saline Solution",
+      "short": "NS 0.9%",
+      "category": ["svp", "flwd"],
+      "tagline": "10 ml single-use FFS vials with in-built twist-off cap",
+      "summary": "Isotonic sodium chloride solution in 10 ml single-use Form-Fill-Seal vials with in-built twist-off cap, for dilution, flushing and reconstitution.",
+      "description": [
+        "Normal Saline (0.9% w/v sodium chloride) is the most widely used isotonic solution in clinical practice. Swanya fills it in 10 ml single-use FFS vials with an in-built twist-off cap — a convenient, unit-dose presentation for diluting drugs, wetting dressings and flushing lines.",
+        "The solution is compounded in Swanya's clear-solution manufacturing area in batch sizes from 500 L to 2,500 L using Water for Injection, sterile-filtered with online filter integrity testing and filled on Form-Fill-Seal machines that form, fill and seal every vial in a closed cycle.",
+        "Batches are tested in-house for assay, pH, osmolality, bacterial endotoxins, sterility and particulate matter before release."
+      ],
+      "variants": [{ "size": "10 ml", "pack": "TODO: confirm pack size" }],
+      "specs": [
+        ["Dosage form", "Sterile isotonic solution"],
+        ["Composition", "Sodium chloride 0.9% w/v in Water for Injection"],
+        ["Fill volume", "10 ml"],
+        ["Container", "Single-use FFS vial with in-built twist-off cap"],
+        ["Filling technology", "Form-Fill-Seal (FFS)"],
+        ["Batch size", "500 L – 2,500 L"],
+        ["Sterilisation", "Sterile filtration with online integrity testing"],
+        ["Shelf life", "TODO: confirm with client"]
+      ],
+      "images": [
+        { "src": "/assets/img/real/swanya-ffs-vials-sterile-water-injection", "ext": "png", "w": 1044, "h": 661, "alt": "Normal Saline 10 ml FFS vials" }
+      ],
+      "datasheet": "/assets/docs/datasheets/normal-saline-solution.pdf",
+      "keywords": "normal saline manufacturer India, sodium chloride 10 ml FFS vial"
+    },
+    {
+      "slug": "respules",
+      "name": "Respules",
+      "short": "Respules",
+      "category": ["svp", "flwd"],
+      "tagline": "1 – 5 ml solution and suspension vials with twist-off caps",
+      "summary": "Unit-dose respules for nebulisation — solutions and suspensions in 1 to 5 ml Form-Fill-Seal vials with twist-off caps, filled in a dedicated suspension area.",
+      "description": [
+        "Respules are single-dose plastic vials for nebulised respiratory therapy. Swanya manufactures both solution and suspension respules in fill volumes from 1 ml to 5 ml on Form-Fill-Seal lines, with a twist-off cap that opens cleanly without scissors or glass.",
+        "Suspensions are handled in a separate, dedicated manufacturing area with its own equipment train, which avoids cross-contact with clear-solution products and allows the homogeneity controls that suspension dosage forms demand.",
+        "Respules are available for contract manufacturing under the partner's brand; formulation, fill volume and strip configuration are agreed at the feasibility stage."
+      ],
+      "variants": [
+        { "size": "1 ml", "pack": "Strip of 5 (TODO: confirm)" },
+        { "size": "2 ml", "pack": "Strip of 5 (TODO: confirm)" },
+        { "size": "2.5 ml", "pack": "Strip of 5 (TODO: confirm)" },
+        { "size": "3 ml", "pack": "Strip of 5 (TODO: confirm)" },
+        { "size": "5 ml", "pack": "Strip of 5 (TODO: confirm)" }
+      ],
+      "specs": [
+        ["Dosage form", "Sterile solution or suspension for inhalation (nebulisation)"],
+        ["Fill volumes", "1 ml – 5 ml"],
+        ["Container", "FFS respule with twist-off cap, supplied in strips"],
+        ["Filling technology", "Form-Fill-Seal (FFS)"],
+        ["Manufacturing area", "Dedicated suspension area, separate from clear solutions"],
+        ["Batch size", "500 L – 2,500 L"],
+        ["Shelf life", "Formulation-specific — confirmed per product"]
+      ],
+      "images": [
+        { "src": "/assets/img/real/swanya-ffs-respules-vial-strips", "ext": "png", "w": 1045, "h": 685, "alt": "Respule vial strips with twist-off caps" }
+      ],
+      "datasheet": "/assets/docs/datasheets/respules.pdf",
+      "keywords": "respules manufacturer India, nebuliser solution suspension FFS Baddi"
+    },
+    {
+      "slug": "ffs-ampoules",
+      "name": "FFS Ampoules",
+      "short": "FFS Ampoules",
+      "category": ["flwd", "svp"],
+      "tagline": "Break-off plastic ampoules, formed, filled and sealed in one cycle",
+      "summary": "Polymer ampoules produced on Form-Fill-Seal machines — no glass particulates, no separate closure, tamper-evident by design.",
+      "description": [
+        "Form-Fill-Seal ampoules replace glass ampoules with a polymer container that is extruded, filled and sealed within seconds inside the FFS machine. The result is a tamper-evident, break-off ampoule with no glass shards, no coring and no separate stopper or cap component to qualify.",
+        "FFS ampoules suit sterile water, saline, diluents and other clear solutions where unit-dose accuracy and safe opening matter — for example emergency kits, veterinary use and hospital wards.",
+        "Fill volumes, ampoule geometry and strip configuration are defined during the contract-manufacturing feasibility study."
+      ],
+      "variants": [{ "size": "Configurable", "pack": "TODO: confirm available fill volumes" }],
+      "specs": [
+        ["Dosage form", "Sterile liquid in single-use ampoule"],
+        ["Container", "Polymer FFS ampoule, break-off opening"],
+        ["Filling technology", "Form-Fill-Seal (FFS)"],
+        ["Fill volumes", "TODO: confirm with client"],
+        ["Sterilisation", "Sterile filtration with online integrity testing"],
+        ["Shelf life", "TODO: confirm with client"]
+      ],
+      "images": [
+        { "src": "/assets/img/real/swanya-ffs-respules-vial-strips", "ext": "png", "w": 1045, "h": 685, "alt": "Form-Fill-Seal plastic ampoule strips" }
+      ],
+      "datasheet": "/assets/docs/datasheets/ffs-ampoules.pdf",
+      "keywords": "FFS ampoule manufacturer India, plastic ampoules Form Fill Seal"
+    }
+  ]
+}

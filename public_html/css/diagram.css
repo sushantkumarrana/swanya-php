@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Water-system diagrams (SVG built by js/diagram.js)
+   ========================================================================== */
+.diagram{position:relative;width:100%}
+.diagram__svg{width:100%;height:auto;display:block;overflow:visible;font-family:var(--f-body)}
+.diagram__edge{fill:none;stroke:#8FB3CC;stroke-width:2;color:#8FB3CC;stroke-linejoin:round;stroke-linecap:round}
+.diagram__drop{filter:drop-shadow(0 1px 2px rgba(11,120,194,.35))}
+.diagram__pump circle{fill:#fff;stroke:#7A9AB5;stroke-width:1.5}
+.diagram__pump path{fill:#1B3A5C}
+.diagram__node{cursor:help;transition:filter var(--dur),transform var(--dur) var(--ease)}
+.diagram__node rect{stroke:#8FB3CC;stroke-width:1.2;transition:stroke var(--dur),filter var(--dur)}
+.diagram__node--tank rect{stroke:#C9B48E}
+.diagram__node:hover rect,.diagram__node:focus-visible rect{stroke:var(--primary);filter:drop-shadow(0 8px 16px rgba(11,120,194,.28))}
+.diagram__node:focus-visible{outline:none}
+.diagram__node:focus-visible rect{stroke-width:2.2}
+.diagram__icon{color:var(--primary-deep)}
+.diagram__node--tank .diagram__icon{color:#8A6A2E}
+.diagram__label{font-family:var(--f-display);font-weight:600;fill:var(--ink)}
+.diagram__sub{fill:var(--body);font-family:var(--f-mono)}
+.diagram__legend text{fill:var(--body);font-family:var(--f-mono);letter-spacing:.02em}
+.diagram__legend rect{stroke:#8FB3CC}
+.diagram__lg-tank{stroke:#C9B48E!important}
+.diagram__lg-pump{fill:#fff;stroke:#7A9AB5;stroke-width:1.5;color:#1B3A5C}
+.diagram__tip{position:absolute;z-index:5;transform:translate(-50%,-100%);max-width:260px;padding:10px 14px;font-size:13px;line-height:1.45;color:var(--ink);background:rgba(255,255,255,.88);border-radius:12px;pointer-events:none;box-shadow:var(--shadow-md)}
+.diagram__tip.is-below{transform:translate(-50%,0)}
+/* Dark surfaces (navy band on home) */
+.diagram--dark .diagram__edge{stroke:rgba(143,214,242,.55);color:rgba(143,214,242,.55)}
+.diagram--dark .diagram__label{fill:var(--ink)}
+.diagram--dark .diagram__legend text{fill:rgba(255,255,255,.7)}
+/* No-JS fallback list */
+.diagram__steps{display:grid;gap:8px;counter-reset:s}
+.diagram__steps li{display:flex;gap:12px;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:14px;color:var(--ink)}
+.diagram__steps li::before{counter-increment:s;content:counter(s);font-family:var(--f-mono);font-size:11px;color:var(--primary);width:22px;height:22px;border-radius:50%;background:var(--bg-cool);display:grid;place-items:center;flex:none}
+.js .diagram.is-ready .diagram__steps{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.diagram.is-stack .diagram__svg{max-width:250px;margin-inline:auto}

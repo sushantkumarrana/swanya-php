@@ -1,0 +1,18 @@
+{
+  "_comment": "Site-wide contact facts. TODO: confirm every value with client before launch.",
+  "name": "Swanya Pharmaceuticals Pvt Ltd",
+  "phone": "+91 XXXXX XXXXX",
+  "phoneTel": "+91XXXXXXXXXX",
+  "whatsapp": "91XXXXXXXXXX",
+  "email": "info@swanyapharma.com",
+  "hours": "Mon – Sat, 9:00 AM – 6:00 PM IST",
+  "address": {
+    "street": "TODO: plot / street",
+    "locality": "Baddi",
+    "region": "Himachal Pradesh",
+    "postalCode": "173205",
+    "country": "IN"
+  },
+  "geo": { "lat": 30.9578, "lng": 76.7914 },
+  "social": { "linkedin": "", "facebook": "", "youtube": "" }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "qa-officer",
+    "title": "Quality Assurance Officer",
+    "department": "Quality Assurance",
+    "type": "Full-time",
+    "location": "Baddi, Himachal Pradesh",
+    "experience": "2–5 years in sterile / injectable manufacturing",
+    "datePosted": "2026-09-01",
+    "validThrough": "2026-12-31",
+    "summary": "TODO: confirm with client — sample opening. Batch record review, deviation and CAPA handling, in-process checks on FFS lines.",
+    "responsibilities": ["Review batch manufacturing and packing records", "Handle deviations, change controls and CAPA", "Perform line clearance and in-process QA checks", "Support internal and customer audits"],
+    "requirements": ["B.Pharm / M.Pharm / M.Sc.", "Experience in sterile dosage forms preferred", "Working knowledge of cGMP documentation"]
+  },
+  {
+    "slug": "qc-microbiologist",
+    "title": "QC Microbiologist",
+    "department": "Quality Control",
+    "type": "Full-time",
+    "location": "Baddi, Himachal Pradesh",
+    "experience": "1–4 years",
+    "datePosted": "2026-09-01",
+    "validThrough": "2026-12-31",
+    "summary": "TODO: confirm with client — sample opening. Environmental monitoring, water-system sampling, sterility and microbial limit testing.",
+    "responsibilities": ["Environmental monitoring of classified areas", "Sampling and testing of Purified Water and WFI", "Sterility, BET and microbial limit tests", "Media preparation and growth-promotion testing"],
+    "requirements": ["M.Sc. Microbiology", "Hands-on experience in a pharma micro lab", "Familiarity with GLP documentation"]
+  }
+]

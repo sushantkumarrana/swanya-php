@@ -1,0 +1,5 @@
+private/config.php
+private/submissions/*
+private/uploads/*
+private/tmp/*
+.DS_Store

@@ -1,0 +1,43 @@
+/* ---- About page ---------------------------------------------------------- */
+.overview__layout{display:grid;gap:clamp(32px,5vw,72px);align-items:start}
+@media (min-width:900px){.overview__layout{grid-template-columns:1.1fr .9fr}}
+.overview__facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
+.overview__media{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg);aspect-ratio:4/3}
+.overview__media img{width:100%;height:100%;object-fit:cover}
+
+/* Leadership messages */
+.leader{display:grid;gap:clamp(28px,4vw,56px);align-items:start;padding:clamp(28px,4vw,48px);border-radius:var(--radius-lg);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+@media (min-width:860px){.leader{grid-template-columns:300px 1fr}.leader--flip{grid-template-columns:1fr 300px}.leader--flip .leader__photo{order:2}}
+.leader+.leader{margin-top:28px}
+.leader__photo{position:sticky;top:calc(var(--header-h) + 24px);border-radius:var(--radius);overflow:hidden;aspect-ratio:1/1;max-width:300px;background:var(--bg-cool);border:1px solid var(--line)}
+.leader__photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.leader__role{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);margin-bottom:10px}
+.leader h3{font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:16px}
+.leader__msg p+p{margin-top:1em}
+.leader__msg .pull{font-family:var(--f-display);font-size:1.15rem;color:var(--ink);border-left:3px solid var(--cyan);padding-left:18px;margin:18px 0}
+.leader__sig{margin-top:18px;font-family:var(--f-display);font-weight:600;color:var(--ink)}
+
+/* Organogram */
+.org{--line-c:var(--line);position:relative;display:grid;gap:0;justify-items:center}
+.org__node{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;min-width:220px;transition:transform var(--dur) var(--ease),box-shadow var(--dur),border-color var(--dur)}
+.org__node:hover{transform:translateY(-4px);box-shadow:var(--shadow-glow);border-color:var(--cyan-soft)}
+.org__av{width:46px;height:46px;border-radius:50%;overflow:hidden;flex:none;background:var(--bg-cool);border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.org__av img{width:100%;height:100%;object-fit:cover;object-position:top}
+.org__name{font-family:var(--f-display);font-weight:600;color:var(--ink);font-size:14.5px;line-height:1.2}
+.org__role{font-size:12px;color:var(--body-light);font-family:var(--f-mono);letter-spacing:.04em;margin-top:3px}
+.org__node--md{background:linear-gradient(135deg,var(--navy-deep),var(--primary-deep));border-color:transparent;padding:18px 22px}
+.org__node--md .org__name{color:#fff;font-size:16px}.org__node--md .org__role{color:var(--cyan-soft)}
+.org__stem{width:2px;height:40px;background:var(--line-c);position:relative}
+.js .org__stem::after{content:"";position:absolute;left:-2px;top:0;width:6px;height:12px;border-radius:3px;background:var(--cyan);animation:org-flow 1.6s linear infinite}
+@keyframes org-flow{from{transform:translateY(-12px);opacity:0}30%{opacity:1}to{transform:translateY(40px);opacity:0}}
+.org__row{display:grid;gap:18px;width:100%;position:relative;padding-top:40px}
+@media (min-width:640px){.org__row{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.org__row{grid-template-columns:repeat(5,1fr)}}
+.org__row::before{content:"";position:absolute;top:0;left:10%;right:10%;height:2px;background:var(--line-c)}
+@media (max-width:1023px){.org__row::before{display:none}}
+.org__row>li{position:relative;justify-self:stretch}
+.org__row>li .org__node{min-width:0;flex-direction:column;text-align:center;height:100%;justify-content:center}
+@media (min-width:1024px){.org__row>li::before{content:"";position:absolute;top:-40px;left:50%;width:2px;height:40px;background:var(--line-c)}
+.js .org__row>li::after{content:"";position:absolute;top:-40px;left:calc(50% - 2px);width:6px;height:12px;border-radius:3px;background:var(--cyan);animation:org-flow 1.6s linear infinite;animation-delay:var(--d,0s)}}
+.org__legend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:26px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--body-light)}
+@media (prefers-reduced-motion:reduce){.org__stem::after,.org__row>li::after{display:none}}

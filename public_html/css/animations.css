@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Animations — loader, scroll reveal, counters, parallax, page transition.
+   Rules: transform/opacity only; content visible by default; hidden state
+   only under `.js` (set by JS); everything off under reduced-motion.
+   ========================================================================== */
+
+/* ---- Loader ------------------------------------------------------------ */
+.loader{transition:transform .6s var(--ease-out),opacity .6s var(--ease)}
+.loader.is-leaving{transform:translateY(-100%);opacity:0}
+.loader__drop{width:96px;height:auto}
+.loader__water{animation:water-rise 1s var(--ease) forwards}
+@keyframes water-rise{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.loader__swan{opacity:0;animation:fade-in .5s .55s var(--ease) forwards}
+@keyframes fade-in{to{opacity:1}}
+.loader__bar i{animation:bar-fill 1.05s var(--ease) forwards}
+@keyframes bar-fill{to{width:100%}}
+/* Failsafe: even if JS crashes, the loader removes itself */
+.js .loader{animation:loader-failsafe 0s 1.6s forwards}
+@keyframes loader-failsafe{to{visibility:hidden;opacity:0}}
+
+/* ---- Scroll reveal ----------------------------------------------------- */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.js .reveal.is-in{opacity:1;transform:none}
+.js .reveal--stagger>*{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+.js .reveal--stagger.is-in>*{opacity:1;transform:none}
+.js .reveal--stagger.is-in>:nth-child(1){transition-delay:.05s}
+.js .reveal--stagger.is-in>:nth-child(2){transition-delay:.13s}
+.js .reveal--stagger.is-in>:nth-child(3){transition-delay:.21s}
+.js .reveal--stagger.is-in>:nth-child(4){transition-delay:.29s}
+.js .reveal--stagger.is-in>:nth-child(5){transition-delay:.37s}
+.js .reveal--stagger.is-in>:nth-child(6){transition-delay:.45s}
+.js .reveal--stagger.is-in>:nth-child(n+7){transition-delay:.52s}
+.js .reveal--left{transform:translateX(-28px)}
+.js .reveal--right{transform:translateX(28px)}
+.js .reveal--scale{transform:scale(.94)}
+
+/* ---- Parallax blobs ---------------------------------------------------- */
+.blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;will-change:transform;z-index:0}
+.blob--cyan{background:rgba(55,184,234,.28)}
+.blob--blue{background:rgba(11,120,194,.24)}
+.blob--soft{background:rgba(143,214,242,.35)}
+
+/* ---- Page transition --------------------------------------------------- */
+.js body{transition:opacity .22s var(--ease)}
+.js body.is-leaving{opacity:0}
+
+/* ---- Sticky section progress ------------------------------------------ */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:1100;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--primary),var(--cyan));pointer-events:none}
+
+/* ---- Micro-motion helpers ---------------------------------------------- */
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(55,184,234,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(55,184,234,0)}100%{box-shadow:0 0 0 0 rgba(55,184,234,0)}}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.media-zoom{overflow:hidden}
+.media-zoom img{transition:transform .8s var(--ease-out)}
+.media-zoom:hover img,a:hover .media-zoom img{transform:scale(1.06)}
+
+/* ---- Reduced motion: instant, no transform ----------------------------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .js .reveal,.js .reveal--stagger>*{opacity:1;transform:none}
+  .loader{display:none}
+  .blob{transform:none!important}
+}

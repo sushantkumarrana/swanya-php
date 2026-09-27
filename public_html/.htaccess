@@ -1,0 +1,68 @@
+# Swanya Pharmaceuticals — Apache config (PHP edition)
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # HTTPS + www canonical (enable after DNS/SSL are live)
+  # RewriteCond %{HTTPS} off [OR]
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^ https://www.swanyapharma.com%{REQUEST_URI} [R=301,L]
+
+  # Legacy .html / .php / trailing-slash / index → clean URL (301)
+  RewriteCond %{THE_REQUEST} \s/+index(\.php|\.html)?[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+([^\s?]+)\.(html|php)[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # Dynamic routes
+  RewriteRule ^products/([a-z0-9-]+)$ product.php?slug=$1 [L,QSA]
+  RewriteRule ^blogs/([a-z0-9-]+)$ blog.php?slug=$1 [L,QSA]
+  RewriteRule ^api/careers/apply$ api/careers.php [L]
+  RewriteRule ^api/(contact|enquiry|download)$ api/$1.php [L]
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+  RewriteRule ^robots\.txt$ robots.php [L]
+  RewriteRule ^favicon\.ico$ assets/img/favicon/favicon.ico [L]
+
+  # Clean URLs: /about → about.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^([a-z0-9-]+)$ $1.php [L,QSA]
+</IfModule>
+
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+
+# Caching: long for assets (fingerprint-free, so bump on change), none for HTML
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(php)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# Uploads limit (careers CV)
+# Uploads limit (careers CV): set in cPanel → MultiPHP INI Editor if php_value is not allowed here
+# php_value upload_max_filesize 6M
+# php_value post_max_size 8M
