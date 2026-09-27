@@ -1,0 +1,5 @@
+{
+  "name": "swanya-php",
+  "private": true,
+  "description": "Marker for Hostinger deploys: the pipeline runs npm install in the root directory, so this file has to exist. The site itself needs no dependencies."
+}

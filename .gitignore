@@ -1,5 +1,5 @@
 
-private/submissions/*
-private/uploads/*
-private/tmp/*
+site/private/submissions/*
+site/private/uploads/*
+site/private/tmp/*
 .DS_Store

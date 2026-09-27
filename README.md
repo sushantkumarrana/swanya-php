@@ -4,10 +4,13 @@ Same front-end (HTML/CSS/vanilla JS) as the Node build, with the server side por
 
 ## Layout
 
-The repo root **is** the document root — Hostinger's GitHub deployment copies it
-straight into `public_html`, so no build step and no path rewriting.
+`site/` is the document root. Hostinger's GitHub deployment copies the contents
+of its configured root directory into `public_html`, and that picker only offers
+subdirectories — hence the folder. `site/package.json` exists because the
+pipeline runs the package manager there; the site has no dependencies.
 
 ```
+site/
 *.php               pages (index, about, manufacturing, products, product, blogs, blog, contact, careers, faq, downloads, company-profile, privacy-policy, terms-and-conditions, thank-you, thank-you-download, 404, 500)
 api/                contact.php, enquiry.php, download.php, careers.php (JSON endpoints)
 css/ js/ assets/    static files
@@ -23,7 +26,7 @@ private/            config, data, content, partials — its .htaccess (`Require 
   tmp/              rate-limit counters (git-ignored)
 ```
 
-`private/` sits inside the document root because Hostinger's deployment only
+`private/` sits inside `site/` because Hostinger's deployment only
 writes there. Apache denies it; `dev-router.php` does the same locally.
 
 ## Setup
@@ -33,7 +36,7 @@ writes there. Apache denies it; `dev-router.php` does the same locally.
 
 ## Local test
 ```bash
-php -S localhost:8080 dev-router.php
+php -S localhost:8080 -t site dev-router.php
 ```
 `dev-router.php` emulates the `.htaccess` rewrites for PHP's built-in server only.
 
