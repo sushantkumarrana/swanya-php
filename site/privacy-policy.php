@@ -59,7 +59,7 @@ require_once __DIR__ . '/private/inc/bootstrap.php';
 <p>This site uses a small number of cookies and similar technologies:</p>
 <ul>
   <li><strong>Strictly necessary</strong> — session and security cookies required for forms and rate limiting. These cannot be switched off.</li>
-  <li><strong>Analytics</strong> — Google Tag Manager and Google Analytics 4 (GA4) set cookies such as <code>_ga</code> to measure visits, pages viewed and interactions such as form submissions, PDF downloads and WhatsApp/phone clicks. IP addresses are anonymised where the tool permits. <!-- TODO: confirm with client — cookie banner / consent mode implementation --></li>
+  <li><strong>Analytics</strong> — when analytics is switched on, Google Tag Manager and Google Analytics 4 (GA4) set cookies such as <code>_ga</code> to measure visits, pages viewed and interactions such as form submissions, PDF downloads and WhatsApp/phone clicks. IP addresses are anonymised where the tool permits. Analytics is not active on this site at present, and this section will be updated before it is switched on.</li>
 </ul>
 <p>You can block or delete cookies in your browser settings; the site will continue to work, but some conveniences may be unavailable.</p>
 
@@ -69,8 +69,8 @@ require_once __DIR__ . '/private/inc/bootstrap.php';
   <li><strong>Google Maps</strong> — the map on our Contact page loads only when you click "Load map"; at that point Google receives your IP address and browser information.</li>
   <li><strong>Google Fonts</strong> — typefaces are loaded from Google's servers, which receive your IP address.</li>
   <li><strong>WhatsApp (Meta)</strong> — if you use the WhatsApp button, your conversation is subject to WhatsApp's terms and privacy policy.</li>
-  <li><strong>Email delivery</strong> — form submissions are sent to our staff via an SMTP email provider. <!-- TODO: confirm with client — name of email/hosting provider --></li>
-  <li><strong>Hosting</strong> — the website and its submission records are hosted with <span class="todo">TODO: hosting provider &amp; region</span>.</li>
+  <li><strong>Email delivery</strong> — form submissions are sent to our staff by the mail service of our hosting provider, Hostinger International Ltd.</li>
+  <li><strong>Hosting</strong> — the website and its submission records are hosted by Hostinger International Ltd on servers located in the United States, so data you submit is transferred outside India.</li>
 </ul>
 <p>We share personal data with these processors only as needed to provide the service, and never for their own marketing.</p>
 
@@ -95,7 +95,7 @@ require_once __DIR__ . '/private/inc/bootstrap.php';
 <p>To exercise any right, email the grievance officer with "Data request" in the subject line. We respond within the time limits prescribed by law.</p>
 
 <h2 id="security">8. Security</h2>
-<p>The site is served over HTTPS. Form submissions are validated and rate-limited on the server, stored in access-controlled storage and forwarded by email only to the staff who need them. CV files are checked for type and size and stored outside the public web root. No method of transmission or storage is completely secure, so we cannot guarantee absolute security, but we review our controls regularly.</p>
+<p>The site is served over HTTPS. Form submissions are validated and rate-limited on the server, stored in access-controlled storage and forwarded by email only to the staff who need them. CV files are checked for type and size and kept in a directory that the web server blocks from public access. No method of transmission or storage is completely secure, so we cannot guarantee absolute security, but we review our controls regularly.</p>
 
 <h2 id="grievance">9. Grievance officer</h2>
 <p>In accordance with the DPDP Act and the Information Technology Act, 2000, the grievance officer for this website is:</p>
